@@ -35,7 +35,7 @@
           <tr class="row nine">
             <td class="hour nine">9am</td>
             <td class="task nine">
-                <textarea id="textarea nine"></textarea>
+                <textarea class="textarea nine"></textarea>
             </td>
             <td>
                 <button class="saveBtn nine">
@@ -47,7 +47,7 @@
         <tr class="row ten">
                 <td class="hour ten">10am</td>
                 <td class="task ten">
-                    <textarea id="textarea ten"></textarea>
+                    <textarea class="textarea ten"></textarea>
                 </td>
                 <td>
                 <button class="saveBtn ten">
@@ -60,7 +60,7 @@
         <tr class="row eleven">
             <td class="hour eleven">11am</td>
             <td class="task eleven">
-                <textarea id="textarea eleven"></textarea>
+                <textarea class="textarea eleven"></textarea>
             </td>
             <td>
             <button class="saveBtn eleven">
@@ -73,7 +73,7 @@
         <tr class="row twelve">
             <td class="hour twelve">12pm</td>
             <td class="task twelve">
-                <textarea id="textarea twelve"></textarea>
+                <textarea class="textarea twelve"></textarea>
             </td>
             <td>
             <button class="saveBtn twelve">
@@ -86,7 +86,7 @@
         <tr class="row one">
             <td class="hour one">1pm</td>
             <td class="task one">
-                <textarea id="textarea one"></textarea>
+                <textarea class="textarea one"></textarea>
             </td>
             <td>
             <button class="saveBtn one">
@@ -99,7 +99,7 @@
         <tr class="row two">
             <td class="hour two">2pm</td>
             <td class="task two">
-                <textarea id="textarea two"></textarea>
+                <textarea class="textarea two"></textarea>
             </td>
             <td>
             <button class="saveBtn two">
@@ -112,7 +112,7 @@
         <tr class="row three">
             <td class="hour three">3pm</td>
             <td class="task three">
-                <textarea id="textarea three"></textarea>
+                <textarea class="textarea three"></textarea>
             </td>
             <td>
             <button class="saveBtn three">
@@ -125,7 +125,7 @@
         <tr class="row four">
             <td class="hour four">4pm</td>
             <td class="task four">
-                <textarea id="textarea four"></textarea>
+                <textarea class="textarea four"></textarea>
             </td>
             <td>
             <button class="saveBtn four">
@@ -138,7 +138,7 @@
         <tr class="row five">
             <td class="hour five">5pm</td>
             <td class="task five">
-                <textarea id="textarea five"></textarea>
+                <textarea class="textarea five"></textarea>
             </td>
             <td>
             <button class="saveBtn five">
@@ -156,8 +156,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script type="text/javascript">
+
+    $(document).ready(function(){
     
     // Array for tasks
+    var tasks = [];
 
     // Display current day in currentDay paragraph
 
@@ -166,11 +169,49 @@
     // Highlight current time slot/hour
     // Future times have different color
 
+    // Call function to get stored tasks from local storage
 
-    // Function for save button click event
-    // Relate textarea to time slot via key/value pairs
-    // Grab user textarea and store in array
-    // Store textarea in local storage
+
+    let taskInput;
+
+    $(".textarea").change(function(event){
+
+        $(taskInput).empty();
+        taskInput = $(this)[0].value;
+        console.log(taskInput)
+
+        // Function for save button click event
+        $(".saveBtn").click(function(event){
+
+        
+        // Relate textarea to time slot via key/value pairs
+       
+        // Grab user textarea and store in array
+        tasks.push(taskInput);
+    
+        $(taskInput).empty();
+        console.log(tasks)
+        
+
+        // console.log(event)
+        // console.log(event.currentTarget)
+        // console.log(tasks);
+        
+
+        })
+    })
+
+    
+    
+    
+    
+    
+    
+    // Function to set tasks in local storage
+
+
+    })
+    
 
     
     </script>
