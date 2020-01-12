@@ -160,7 +160,8 @@
     $(document).ready(function(){
     
     // Array for tasks
-    var tasks = [];
+    var tasks = [{}];
+    let taskInput;
 
     // Display current day in currentDay paragraph
 
@@ -172,13 +173,14 @@
     // Call function to get stored tasks from local storage
 
 
-    let taskInput;
-
     $(".textarea").change(function(event){
 
         $(taskInput).empty();
+        console.log(event)
         taskInput = $(this)[0].value;
+        taskClass = $(this)[0].classList[1];
         console.log(taskInput)
+        console.log("Task Hour: " + taskClass)
 
         // Function for save button click event
         $(".saveBtn").click(function(event){
@@ -187,25 +189,12 @@
         // Relate textarea to time slot via key/value pairs
        
         // Grab user textarea and store in array
-        tasks.push(taskInput);
-    
+        tasks.push({"Task": taskInput}, {"Hour": taskClass});
         $(taskInput).empty();
         console.log(tasks)
-        
-
-        // console.log(event)
-        // console.log(event.currentTarget)
-        // console.log(tasks);
-        
-
         })
     })
 
-    
-    
-    
-    
-    
     
     // Function to set tasks in local storage
 
