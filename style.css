@@ -52,6 +52,7 @@ body {
     /* white-space: pre-wrap; */
     height: 80px;
     border-top: 1px solid pink;;
+    flex-wrap: nowrap;
   }
   
   .hour {
@@ -101,4 +102,23 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
+
+  @media (max-width: 900px) {
+     img {
+         width: 30px;
+     }
+     /* .task {
+         width: 50%;
+     } */
+     .row {
+         flex-wrap: nowrap;
+         width: 80%;
+         height: 50px;
+     }
+     .hour {
+         font-size: 12px;
+     }
+
+  }
+
   
