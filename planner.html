@@ -1,208 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead" id="opener">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
-      <table>
-          
-          <tr class="row nine">
-            <td class="hour nine">9am</td>
-            <td class="task nine">
-                <textarea class="textarea nine"></textarea>
-            </td>
-            <td>
-                <button class="saveBtn nine">
-                    <!-- save image on button -->
-                    <img src="assets/save.jpg">
-                </button>
-            </td>
-        </tr>  
-        <tr class="row ten">
-                <td class="hour ten">10am</td>
-                <td class="task ten">
-                    <textarea class="textarea ten"></textarea>
+        <!-- Timeblocks go here -->
+        <table>
+
+            <tr class="row nine">
+                <td class="hour nine">09:00</td>
+                <td class="task nine">
+                    <textarea class="textarea nine" id="nine"></textarea>
                 </td>
                 <td>
-                <button class="saveBtn ten">
-                    <!-- save image on button -->
-                    <img src="assets/save.jpg">
-                </button>
+                    <button class="saveBtn nine">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
                 </td>
             </tr>
-            
-        <tr class="row eleven">
-            <td class="hour eleven">11am</td>
-            <td class="task eleven">
-                <textarea class="textarea eleven"></textarea>
-            </td>
-            <td>
-            <button class="saveBtn eleven">
-                <!-- save image on button -->
-                <img src="assets/save.jpg">
-            </button>
-            </td>
-        </tr>
+            <tr class="row ten">
+                <td class="hour ten">10:00</td>
+                <td class="task ten">
+                    <textarea class="textarea ten" id="ten"></textarea>
+                </td>
+                <td>
+                    <button class="saveBtn ten">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
+                </td>
+            </tr>
 
-        <tr class="row twelve">
-            <td class="hour twelve">12pm</td>
-            <td class="task twelve">
-                <textarea class="textarea twelve"></textarea>
-            </td>
-            <td>
-            <button class="saveBtn twelve">
-                <!-- save image on button -->
-                <img src="assets/save.jpg">
-            </button>
-            </td>
-        </tr>
+            <tr class="row eleven">
+                <td class="hour eleven">11:00</td>
+                <td class="task eleven">
+                    <textarea class="textarea eleven" id="eleven"></textarea>
+                </td>
+                <td>
+                    <button class="saveBtn eleven">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
+                </td>
+            </tr>
 
-        <tr class="row one">
-            <td class="hour one">1pm</td>
-            <td class="task one">
-                <textarea class="textarea one"></textarea>
-            </td>
-            <td>
-            <button class="saveBtn one">
-                <!-- save image on button -->
-                <img src="assets/save.jpg">
-            </button>
-            </td>
-        </tr>
+            <tr class="row twelve">
+                <td class="hour twelve">12:00</td>
+                <td class="task twelve">
+                    <textarea class="textarea twelve" id="twelve"></textarea>
+                </td>
+                <td>
+                    <button class="saveBtn twelve">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
+                </td>
+            </tr>
 
-        <tr class="row two">
-            <td class="hour two">2pm</td>
-            <td class="task two">
-                <textarea class="textarea two"></textarea>
-            </td>
-            <td>
-            <button class="saveBtn two">
-                <!-- save image on button -->
-                <img src="assets/save.jpg">
-            </button>
-            </td>
-        </tr>
+            <tr class="row one">
+                <td class="hour one">13:00</td>
+                <td class="task one">
+                    <textarea class="textarea one" id="one"></textarea>
+                </td>
+                <td>
+                    <button class="saveBtn one">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
+                </td>
+            </tr>
 
-        <tr class="row three">
-            <td class="hour three">3pm</td>
-            <td class="task three">
-                <textarea class="textarea three"></textarea>
-            </td>
-            <td>
-            <button class="saveBtn three">
-                <!-- save image on button -->
-                <img src="assets/save.jpg">
-            </button>
-            </td>
-        </tr>
+            <tr class="row two">
+                <td class="hour two">14:00</td>
+                <td class="task two">
+                    <textarea class="textarea two" id="two"></textarea>
+                </td>
+                <td>
+                    <button class="saveBtn two">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
+                </td>
+            </tr>
 
-        <tr class="row four">
-            <td class="hour four">4pm</td>
-            <td class="task four">
-                <textarea class="textarea four"></textarea>
-            </td>
-            <td>
-            <button class="saveBtn four">
-                <!-- save image on button -->
-                <img src="assets/save.jpg">
-            </button>
-            </td>
-        </tr>
+            <tr class="row three">
+                <td class="hour three">15:00</td>
+                <td class="task three">
+                    <textarea class="textarea three" id="three"></textarea>
+                </td>
+                <td>
+                    <button class="saveBtn three">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
+                </td>
+            </tr>
 
-        <tr class="row five">
-            <td class="hour five">5pm</td>
-            <td class="task five">
-                <textarea class="textarea five"></textarea>
-            </td>
-            <td>
-            <button class="saveBtn five">
-                <!-- save image on button -->
-                <img src="assets/save.jpg">
-            </button>
-            </td>
-        </tr>
-      </table>
+            <tr class="row four">
+                <td class="hour four">16:00</td>
+                <td class="task four">
+                    <textarea class="textarea four" id="four"></textarea>
+                </td>
+                <td>
+                    <button class="saveBtn four">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
+                </td>
+            </tr>
 
-      </div>
+            <tr class="row five">
+                <td class="hour five">17:00</td>
+                <td class="task five">
+                    <textarea class="textarea five" id="five"></textarea>
+                </td>
+                <td>
+                    <button class="saveBtn five">
+                        <!-- save image on button -->
+                        <img src="assets/save.jpg">
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
 
     <script type="text/javascript">
 
-    $(document).ready(function(){
-    
-    // Array for tasks
-    var tasks = [{}];
-    let taskInput;
+        $(document).ready(function () {
 
-    // Display current day in currentDay paragraph
+            // Array for tasks
+            var tasks = [];
+            let taskInput;
+            var now = moment();
+            let opener = $("#opener");
+            var plannerTime;
 
-    // Function to color planner time slots accordingly 
-    // Grey out times that have passed
-    // Highlight current time slot/hour
-    // Future times have different color
+            for (let i = 0; i < 9; i++) {
+            plannerTime = $(".hour")[i].textContent;
+            // console.log(plannerTime).textContent;
+            console.log(plannerTime);
 
-    // Call function to get stored tasks from local storage
+            if (now > moment(plannerTime, ["HH:mm"])) {
+                console.log("it's greater")
+                $(".row").addClass("pastDue")
+            }
+            else if (now === moment(plannerTime, ["HH:mm"])) {
+            console.log("current time slot")
+                $(".row").addClass("currentTime")
+            }
+            else {
+            console.log("it's less")
+            $(".row").addClass("notPast")
+            }
+            }
+           
+
+            // Display current day in currentDay paragraph
+            $("#currentDay").text(now).append();
+            // console.log(moment().get('hour'));
+
+            
 
 
-    $(".textarea").change(function(event){
+            // Function to color planner time slots accordingly 
 
-        $(taskInput).empty();
-        console.log(event)
-        taskInput = $(this)[0].value;
-        taskClass = $(this)[0].classList[1];
-        console.log(taskInput)
-        console.log("Task Hour: " + taskClass)
 
-        // Function for save button click event
-        $(".saveBtn").click(function(event){
+            // Grey out times that have passed
+            // Highlight current time slot/hour
+            // Future times have different color
 
-        
-        // Relate textarea to time slot via key/value pairs
-       
-        // Grab user textarea and store in array
-        tasks.push({"Task": taskInput}, {"Hour": taskClass});
-        $(taskInput).empty();
-        console.log(tasks)
+            // Call function to get stored tasks from local storage
+            tasks = JSON.parse(localStorage.getItem("notes"))   //  array of objects and every objet has key:value (hour:input)
+            if (!tasks) {
+                tasks= [];
+            }
+            // console.log("FIRST", tasks)
+
+            // Relate textarea to time slot via key/value pairs
+            for (let i = 0; i < tasks.length; i++) {
+                var hour = Object.keys(tasks[i])[0]
+                var input = tasks[i][hour]
+                console.log(hour, input)
+                var myclass = "." + hour
+                // console.log("my", myclass)
+      
+                $('.' + hour).val(input)
+                
+
+            }
+            // Function for changes made to task slots
+            // $(".textarea").change(function(event){
+
+
+
+            // Function for save button click event
+            $(".saveBtn").click(function (event) {
+                $(taskInput).empty();
+                // console.log(event)
+                // taskInput = $(this)[0].value;
+                // taskClass = $(this)[0].classList[1];
+
+                taskInput = $(this).parent().siblings(".task").children().val()
+                // taskClass = $(this).parent().siblings(".task").children().attr("class").split(" ")[1]
+                taskClass = $(this).parent().siblings(".task").children()[0].classList[1];
+                // console.log($(this).parent().siblings(".task").children()[0].attributes[0].value)
+                // console.log($(this).parent().siblings(".task").children()[0].attributes[1].value)
+                // console.log($(this).parent().siblings(".task").children().attr("id").value);
+                // taskClass = $(this).parent().siblings[".task"].children().classList[1]
+                
+                // console.log(taskInput)
+                // console.log("Task Hour: " + taskClass)
+                var obj = {
+                    [taskClass]: taskInput
+                }
+                // console.log(obj)
+                
+
+                // Grab user textarea and store in array
+                tasks.push(obj);
+
+                
+                // console.log(tasks)
+                storage();
+            })
+
+            // Function to set tasks in local storage
+            function storage () {
+                localStorage.setItem("notes", JSON.stringify(tasks))
+                $(taskInput).empty();
+            }
+            
+
+
         })
-    })
-
-    
-    // Function to set tasks in local storage
 
 
-    })
-    
 
-    
     </script>
-  </body>
+</body>
+
 </html>

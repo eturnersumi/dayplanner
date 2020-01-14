@@ -30,6 +30,18 @@ body {
   .description{
     white-space: pre-wrap;
   }
+
+  .pastDue {
+    background-color: red;
+  }
+
+  .currentTime {
+      background-color: yellow;
+  }
+
+  .notDue {
+    background-color: green;
+  }
   
   .time-block{
     text-align: center;
